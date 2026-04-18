@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    padding: 20px 0;
+}
+.nav-link {
+    position: relative;
+}
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #0dcaf0;
+}
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  
+}
+.carousel-item img {
+    width: 100%;
+    height: 70vh;
+}
+.feature-box {
+  padding: 60px 0px;
+}
+.bg-teal-1 { background: #0bb3a4; }
+.bg-teal-2 { background: #14bfb0; }
+.bg-teal-3 { background: #1fcfc0; }
+.feature-box .icon {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+.pricing{
+    background-color: #ddd;
+}
+.text-teal { color: #1abc9c; }
+.bg-teal {
+  background-color: #1abc9c !important;
+}
+.btn-teal {
+  background: #1abc9c;
+  color: #fff;
+}
+.btn-teal:hover {
+  background: #17a589;
+  color: #fff;
+}
+.pricing-card {
+  border: none;
+  box-shadow: 0 0 15px rgba(0,0,0,0.08);
+}
+.price {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 20px 0;
+  position: relative;
+}
+.price span {
+  font-size: 24px;
+  position: absolute;
+  top: 0;
+}
+.price small {
+  font-size: 14px;
+}
+

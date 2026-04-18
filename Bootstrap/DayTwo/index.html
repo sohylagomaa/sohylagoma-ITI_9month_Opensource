@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="./bootstrap-5.2.3-dist/css/bootstrap.min.css"
+    />
+    <script src="./bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- fontawesome icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- main style -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-white mt-0">
+      <div class="container">
+        <a class="navbar-brand fs-2 fw-bold" href="#"
+          ><i class="fa-solid fa-cloud text-info me-2"></i><span>HOSTO</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+          <ul class="navbar-nav">
+            <li class="nav-item fs-5 active-link">
+              <a class="nav-link active text-info" href="#">Home</a>
+            </li>
+            <li class="nav-item fs-5">
+              <a class="nav-link" href="#">Layouts</a>
+            </li>
+            <li class="nav-item fs-5">
+              <a class="nav-link" href="#">Elements</a>
+            </li>
+            <li class="nav-item fs-5">
+              <a class="nav-link" href="#">Portfolio</a>
+            </li>
+            <li class="nav-item fs-5">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item fs-5">
+              <a class="nav-link" href="#">Contact us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="test" class="carousel slide d-none d-md-block d-md-block">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#test"
+          data-bs-slide-to="0"
+          class="active rounded-circle"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#test"
+          data-bs-slide-to="1"
+          class="rounded-circle"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#test"
+          data-bs-slide-to="2"
+          class="rounded-circle"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/c1.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="images/c3.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="images/c2.jpg" class="d-block w-100" alt="..." />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#test"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#test"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <section class="features py-5">
+      <div class="container">
+        <div class="row text-center text-white">
+          <div class="col-md-4 feature-box bg-teal-1">
+            <div class="icon mb-3">
+              <i class="fa-solid fa-thumbs-up"></i>
+            </div>
+            <small>Mobile</small>
+            <h4 class="mt-2">Secure & Reliable</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+
+          <div class="col-md-4 feature-box bg-teal-2">
+            <div class="icon mb-3">
+              <i class="fa-solid fa-rocket"></i>
+            </div>
+            <small>Mobile</small>
+            <h4 class="mt-2">Quick & Super Fast</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+
+          <div class="col-md-4 feature-box bg-teal-3">
+            <div class="icon mb-3">
+              <i class="fa-solid fa-comments"></i>
+            </div>
+            <small>Mobile</small>
+            <h4 class="mt-2">Customer Support</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pricing py-5">
+      <div class="container text-center">
+        <h2 class="fw-bold">
+          Hosto <span class="text-teal">Plans & Pricing</span>
+        </h2>
+        <p class="text-muted mb-5">
+          Our hosting plans in detail. choose the right plan for you!
+        </p>
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="card pricing-card">
+              <div class="card-header bg-teal text-white">Web Hosting</div>
+              <div class="price">$4<span>.45</span> <small>/month</small></div>
+              <ul class="list-unstyled">
+                <li>10GB Storage Space</li>
+                <li>15GB Bandwidth</li>
+                <li>Unlimited FTP & Email</li>
+                <li>Free Domain</li>
+              </ul>
+              <a href="#" class="btn btn-teal w-100">Sign Up Now</a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card pricing-card">
+              <div class="card-header bg-teal text-white">Reseller Hosting</div>
+              <div class="price">$9<span>.45</span> <small>/month</small></div>
+              <ul class="list-unstyled">
+                <li>10GB Storage Space</li>
+                <li>15GB Bandwidth</li>
+                <li>Unlimited FTP & Email</li>
+                <li>Free Domain</li>
+              </ul>
+              <a href="#" class="btn btn-teal w-100">Sign Up Now</a>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card pricing-card">
+              <div class="card-header bg-teal text-white">VPS Hosting</div>
+              <div class="price">$12<span>.45</span> <small>/month</small></div>
+              <ul class="list-unstyled">
+                <li>10GB Storage Space</li>
+                <li>15GB Bandwidth</li>
+                <li>Unlimited FTP & Email</li>
+                <li>Free Domain</li>
+              </ul>
+              <a href="#" class="btn btn-teal w-100">Sign Up Now</a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card pricing-card">
+              <div class="card-header bg-teal text-white">Domain Names</div>
+              <div class="price">$14<span>.45</span> <small>/month</small></div>
+              <ul class="list-unstyled">
+                <li>10GB Storage Space</li>
+                <li>15GB Bandwidth</li>
+                <li>Unlimited FTP & Email</li>
+                <li>Free Domain</li>
+              </ul>
+              <a href="#" class="btn btn-teal w-100">Sign Up Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
