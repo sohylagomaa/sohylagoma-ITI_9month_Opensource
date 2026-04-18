@@ -1,0 +1,16 @@
+.landing {
+  background-image: url("../images/bg-image.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 45vh;
+}
+@media (max-width: 767px) {
+  .landing {
+    height: 30vh;
+  }
+  .custom-sm-btn {
+    display: block;
+   margin: 12px auto;
+  }
+}
