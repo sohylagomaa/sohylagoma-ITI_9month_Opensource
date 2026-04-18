@@ -1,0 +1,6 @@
+[
+  { "id": 1, "title": "first post", "content": "Hello one" },
+  { "id": 2, "title": "second post", "content": "Hello Two" },
+  { "id": 3, "title": "third post", "content": "Hello Three" },
+  { "id": 4, "title": "fourth post", "content": "Hello Four" }
+]
