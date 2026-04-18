@@ -1,2 +1,3 @@
-.vscode 
-Bootstrap/dayOne/bootstrap-5.2.3-dist
+.vscode
+node_modules/
+Bootstrap/dayOne/bootstrap-5.2.3-dist/
