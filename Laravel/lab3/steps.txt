@@ -1,0 +1,9 @@
+php artisan tinker -->      $post = App\Models\Post::first();
+                            $post->created_at = now()->subYears(3);
+                            $post->save();
+
+
+new terminal --> php artisan queue:work
+
+
+tinker --> App\Jobs\PruneOldPostsJob::dispatch();
