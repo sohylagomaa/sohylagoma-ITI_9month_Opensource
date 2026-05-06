@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>board</title>
+  </head>
+  <body>
+    <canvas
+      id="drawCanvas"
+      width="600"
+      height="400"
+      style="border: 1px solid #000"
+    ></canvas>
+
+    <script>
+      const canvas = document.getElementById("drawCanvas");
+      const ctx = canvas.getContext("2d");
+
+      let drawing = false;
+      let erasing = false;
+      let lastX = 0;
+      let lastY = 0;
+
+      canvas.addEventListener("contextmenu", (e) => e.preventDefault());
+
+      canvas.addEventListener("mousedown", (e) => {
+        if (e.button === 0) {
+          
+          drawing = true;
+        } else if (e.button === 2) {
+          
+          erasing = true;
+        }
+        lastX = e.offsetX;
+        lastY = e.offsetY;
+      });
+
+      canvas.addEventListener("mousemove", (e) => {
+        if (!drawing && !erasing) return;
+
+        const x = e.offsetX;
+        const y = e.offsetY;
+
+        ctx.beginPath();
+        ctx.moveTo(lastX, lastY);
+        ctx.lineTo(x, y);
+
+        if (drawing) {
+          ctx.strokeStyle = "#000";
+          ctx.lineWidth = 3;
+        } else if (erasing) {
+          ctx.strokeStyle = "#fff"; 
+          ctx.lineWidth = 20;
+        }
+
+        ctx.lineCap = "round";
+        ctx.stroke();
+        ctx.closePath();
+
+        lastX = x;
+        lastY = y;
+      });
+
+      canvas.addEventListener("mouseup", () => {
+        drawing = false;
+        erasing = false;
+      });
+
+      canvas.addEventListener("mouseleave", () => {
+        drawing = false;
+        erasing = false;
+      });
+    </script>
+  </body>
+</html>

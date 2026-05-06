@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+nav {
+  background-color: grey;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 10px auto;
+}
+li {
+  display: inline-block;
+  transition: all 0.3s ease;
+  padding: 15px;
+}
+li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #333;
+  padding: 12px;
+  font-weight: 500;
+  background-color: transparent;
+}
+li a i {
+  font-size: 32px;
+  transition: color 0.3s ease;
+  color: white;
+}
+li:hover {
+  background-color: green;
+  color: white;
+}
+li:first-child {
+  background-color: green;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+/* ---------- */
+.contact-chip {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  font-family: Arial, sans-serif;
+}
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.chip-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 8px;
+  padding: 10px 14px;
+  background: #f1f1f1;
+  border-radius: 25px;
+
+  transform-origin: left;
+  transform: scaleX(1);
+  opacity: 1;
+  transition:
+    transform 0.4s ease,
+    opacity 0.3s ease;
+}
+.chip-content.closed {
+  transform: scaleX(0);
+  opacity: 0;
+}
+.close-btn {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+}
+/* ==== */
+.gallery {
+  width: 700px;
+  margin: 30px auto;
+}
+.gallery img {
+  cursor: pointer;
+
+  transform: scale(1.1); 
+  transition: transform 0.4s ease;
+}
+.gallery img:hover {
+  transform: scale(1); 
+}
+/* === */
+.columns-text {
+  width: 80%;
+  margin: 40px auto;
+  font-size: 18px;
+  line-height: 1.6;
+
+  /* CSS3 Columns */
+  column-count: 3;
+  column-gap: 30px;
+  column-rule: 2px solid #ccc;
+}
+
+/* === */
+.tiger {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  width: 200px;
+  animation: walk 10s linear infinite;
+}
+@keyframes walk {
+  0% {
+    transform: translateX(0) scaleX(1);
+  }
+
+  49% {
+    transform: translateX(calc(100vw - 200px)) scaleX(1);
+  }
+
+  50% {
+    transform: translateX(calc(100vw - 200px)) scaleX(-1);
+  }
+
+  99% {
+    transform: translateX(0) scaleX(-1);
+  }
+
+  100% {
+    transform: translateX(0) scaleX(1);
+  }
+}

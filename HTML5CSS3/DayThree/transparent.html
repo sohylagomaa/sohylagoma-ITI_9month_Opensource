@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>trnasparent</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <canvas id="myCanvas" width="400" height="400"></canvas>
+    <script>
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+
+      ctx.beginPath();
+      ctx.arc(200, 200, 150, 0, Math.PI * 2);
+      ctx.fillStyle = "rgba(100, 150, 255, 0.5)";
+      ctx.fill();
+      ctx.closePath();
+
+      const gradient = ctx.createLinearGradient(100, 0, 300, 0);
+      gradient.addColorStop(0, "#ff0080");
+      gradient.addColorStop(0.5, "#7928ca");
+      gradient.addColorStop(1, "#2afadf");
+
+      ctx.fillStyle = gradient;
+      ctx.font = "bold 32px Arial";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+
+      ctx.fillText("Sohyla Gomaa", 200, 200);
+    </script>
+  </body>
+</html>
