@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=x, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const student = {
+        name: "sohyla",
+        university: "minya",
+        faculty: "Computer science",
+        grade: "very good",
+      };
+      console.log(
+        `${student.name} is a student in falculty of ${student.faculty} in university ${student.university} and his final garde ${student.grade}`
+      );
+
+      function queue(maxSize) {
+        let arr = [maxSize];
+        let toq = 0;
+        this.inQueue = function (value) {
+          if (toq === maxSize) {
+            console.log("queue is full");
+          } else {
+            arr[toq] = value;
+            toq++;
+          }
+        };
+
+        this.deQueue = function () {
+          var removed = arr[0];
+          if (toq === 0) {
+            console.log("the queue is empty");
+          } else {
+            for (var i = 1; i < toq; i++) {
+              arr[i - 1] = arr[i];
+            }
+            toq--;
+          }
+        };
+
+        this.currentSize = function () {
+          return toq;
+        };
+
+        function getQueueElements() {
+          if (toq !== 0) {
+            for (var i = 0; i < toq; i++) {
+              console.log(arr[i]);
+            }
+          } else {
+            console.log("queue is empty");
+          }
+          return toq;
+        }
+
+        this.viewQueue = function () {
+          return getQueueElements;
+        };
+
+        this.returnQueue = function () {
+          return function () {
+            return arr.slice(0, toq);
+          };
+        };
+      }
+
+      var myqueue = new queue(3);
+
+      myqueue.inQueue(100);
+      myqueue.inQueue(200);
+      myqueue.inQueue(300);
+
+      myqueue.deQueue();
+
+      console.log(myqueue.viewQueue()());
+
+      var resFunc = myqueue.returnQueue();
+      var finalRes = resFunc();
+      console.log(finalRes);
+
+      queue.prototype.isEmpty = function () {
+        return this.toq === 0;
+      };
+      console.log(myqueue.isEmpty());
+    </script>
+  </body>
+</html>
