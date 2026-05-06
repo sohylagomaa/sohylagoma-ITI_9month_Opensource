@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day_03</title>
+  </head>
+  <body>
+    <!-- 1 -->
+    <input
+      type="text"
+      onkeydown="pressedKey(event)"
+      onmousedown="mouseType(event)"
+    />
+
+    <!-- 2 -->
+    <button onclick="displayTime()" onkeydown="stopTime(event)">
+      StartClock
+    </button>
+    <div id="div1"></div>
+
+    <!-- 4 -->
+    <form action="welcom.html" method="get" target="_blank">
+      <label for="username">User Name:</label><br />
+      <input
+        type="text"
+        name="username"
+        placeholder="Enter your user name here"
+      /><br /><br />
+
+      <label for="password">Password:</label><br />
+      <input type="password" name="password" /><br /><br />
+      <input type="submit" value="Login" />
+    </form>
+
+    <!-- 5 -->
+    <a href="#" onclick="popup()">newindow</a>
+    <a href="#" onclick="closepage()">closeWindow</a>
+
+    <!-- 6 -->
+    <form>
+      <input type="checkbox" id="terms" />
+      <label for="terms">
+        <a href="terms.html" target="_blank">I agree to Terms and conditions</a>
+      </label>
+    </form>
+    <!-- 7 -->
+    <label for="firstname">First Name:</label><br />
+    <input
+      type="text"
+      name="firstname"
+      id="firstname"
+      onkeydown="KeycodeCheck(event)"
+    /><br /><br />
+    <script src="script.js"></script>
+  </body>
+</html>

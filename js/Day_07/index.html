@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day_08</title>
+  </head>
+  <body>
+    <button id="button_1">this</button>
+    <button id="gen">generator</button>
+    <button id="tip">tip</button>
+
+    <script>
+      //1
+      //   (function (sum){
+      //     alert(sum);
+      //   })(5+7)
+
+      //2
+      let arr = [1, 2, 3, 4, 5, 6];
+
+      let oddNumbers = arr.filter((item) => item % 2 != 0);
+      console.log(oddNumbers);
+
+      console.log("=================");
+      arr.forEach((item) => {
+        if (item % 2 == 0) console.log(item);
+      });
+
+      console.log("=================");
+      let numSquer = arr.map((item) => item * item);
+      console.log(numSquer);
+
+      console.log("=================");
+      document.getElementById("button_1").onclick = function () {
+        console.log(this); //button
+      };
+
+      document.getElementById("button_1").onclick = () => {
+        console.log(this); //window
+      };
+      //3
+      console.log("=================");
+      let arr2 = [0, ...arr, 7];
+      console.log(arr2);
+      //4
+      console.log("=================");
+      let student = {
+        name: "Hamza",
+        university: "minya",
+        faculty: "CS",
+        finalGrade: "Excellent",
+      };
+      console.log(
+        `${student.name} is a student in faculty of ${student.faculty} in university ${student.university} And his final grad is ${student.finalGrade}`
+      );
+      //5
+      console.log("=================");
+      let names = new Set();
+      names.add("sohyla");
+      names.add("batool");
+      names.add("sohyla");
+
+      console.log([...names]);
+
+      for (var i of names) {
+        console.log(i);
+      }
+      //6
+      console.log("=================");
+
+      function* tipsGenerator() {
+        let tips = [
+          "tip_1",
+          "tip_2",
+          "tip_3",
+          "tip_4",
+          "tip_5",
+          "tip_6",
+          "tip_7",
+        ];
+        for (let tip of tips) {
+          yield tip;
+        }
+      }
+
+      let gen = tipsGenerator();
+      console.log(gen.next().value);
+
+      document.getElementById("gen").onclick = function () {
+        let gener = tipsGenerator();
+        for (let tip of gener) {
+          console.log(tip);
+        }
+      };
+
+      document.getElementById("tip").onclick = function () {
+        let gen = tipsGenerator();
+
+        let interval = setInterval(() => {
+          let result = gen.next();
+          if (result.done) {
+            clearInterval(interval);
+          } else {
+            console.log(result.value);
+          }
+        }, 3000);
+      };
+    </script>
+  </body>
+</html>
