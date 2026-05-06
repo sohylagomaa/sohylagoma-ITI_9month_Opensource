@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+header {
+  display: flex;
+  background-color: rgb(247, 217, 222);
+  padding: 20px;
+}
+.profile {
+  width: 15%;
+  text-align: center;
+}
+.profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  
+  margin-right: 15px;
+}
+.info {
+  flex: 1;
+}
+.main {
+  display: flex;
+   background-color: rgb(208, 208, 247);
+}
+aside {
+    background-color: #ece2f4;
+    padding: 30px 40px;
+    width: 20%;
+}
+aside h2 {
+  text-align: center;
+}
+.contact img {
+  width: 28px;
+  margin-right: 8px;
+}
+.contact .contact-info {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+.lang label {
+  display: block;
+}
+.lang progress {
+  width: 80%;
+  margin-left: 4px;
+  height: 18px;
+  background-color: #eee;
+  border-radius: 4px;
+}
+.skills {
+    display: flex;
+    justify-content: space-between;
+}
+.skill {
+    border-radius: 20px;
+    width: 60px;
+    height: 40px;
+    background-color: rgb(119, 119, 252);
+    color: wheat;
+    font-weight: bold;
+    text-align: center;
+    margin-right: 5px;
+    padding-top: 20px; 
+}
+.online {
+    display: flex;
+    justify-content: space-between;
+}
+.online-info {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.online-info img{
+    width: 28px;
+    margin-right: 8px;
+}
+.right-side h2{
+    padding: 10px;
+    width: 40%;
+    margin-left: 20px;
+    background-color: rgb(235, 209, 225);
+}
+.right-side .one {
+    margin-left: 40px;
+}
+.right-side .ch {
+    margin-left: 30px;
+}

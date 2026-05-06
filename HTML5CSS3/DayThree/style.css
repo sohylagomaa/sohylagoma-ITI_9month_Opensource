@@ -1,0 +1,31 @@
+svg {
+  display: block;
+  margin: 10px;
+}
+.face {
+  fill: #ffddb3;
+}
+.eye {
+  fill: #333;
+  transition: fill 0.3s ease;
+}
+.nose {
+  fill: #ffb380;
+  transition: fill 0.3s ease;
+}
+.mouth {
+  fill: #e67373;
+  transition: fill 0.3s ease;
+}
+.eye:hover {
+  fill: #4da6ff;
+  cursor: pointer;
+}
+.nose:hover {
+  fill: #ff704d;
+  cursor: pointer;
+}
+.mouth:hover {
+  fill: #cc0000;
+  cursor: pointer;
+}
